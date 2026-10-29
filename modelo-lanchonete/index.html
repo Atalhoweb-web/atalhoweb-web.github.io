@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brasa Burger | Hamburgueria artesanal em Londrina</title>
+<meta name="description" content="Hamburgueria artesanal em Londrina. Burgers na brasa, porções e delivery. Veja o cardápio e peça pelo WhatsApp.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brasa Burger">
+<meta property="og:description" content="Hamburgueria artesanal em Londrina. Burgers na brasa, porções e delivery. Veja o cardápio e peça pelo WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=1200&amp;q=70&amp;auto=format&amp;fit=crop">
+<meta property="og:url" content="https://atalhoweb-web.github.io/modelo-lanchonete/">
+<meta name="theme-color" content="#1a0f0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%23ffb02e%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-family%3D%22Arial%22%20font-weight%3D%22900%22%20font-size%3D%2234%22%20text-anchor%3D%22middle%22%20fill%3D%22%231a0f0a%22%3EB%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo%20Black:wght@400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--dark:#1a0f0a;--accent:#ffb02e;--ink:#14161a;--muted:#5d6470;--line:#e7e9ee;--soft:#fbf5ec;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.logo{font-family:"Archivo Black",sans-serif;line-height:1.08;font-weight:400;letter-spacing:-.5px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:88px 0}
+.kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.sec-head{max-width:620px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(32px,4.5vw,48px)}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:17px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn svg{width:20px;height:20px}
+.btn-main{background:var(--accent);color:var(--dark);box-shadow:0 10px 30px -10px var(--accent)}
+.btn-main:hover{transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* topo */
+.nav{position:fixed;inset:0 0 auto;z-index:20;transition:background .25s,box-shadow .25s}
+.nav.solid{background:var(--dark);box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{color:#fff;text-decoration:none;font-size:24px}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:26px;list-style:none}
+.links a{color:rgba(255,255,255,.85);text-decoration:none;font-weight:500;font-size:15px}
+.links a:hover{color:#fff}
+.nav .btn{padding:10px 18px;font-size:14px}
+@media(max-width:860px){.links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;padding:140px 0 70px;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=2000&amp;q=70&amp;auto=format&amp;fit=crop") center/cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 70%),linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.25) 40%,var(--dark) 100%)}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(46px,8vw,92px);max-width:900px}
+.hero p.lead{font-size:clamp(18px,2.2vw,22px);max-width:560px;margin:18px 0 32px;color:rgba(255,255,255,.88)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);padding:9px 15px;border-radius:999px;font-size:14px;font-weight:500}
+.chip svg{width:17px;height:17px;color:var(--accent)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:#9aa0a6}
+.chip.open .dot{background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.25)}
+.stars{display:inline-flex;gap:2px;color:#ffc531}
+.stars svg{width:16px;height:16px}
+
+/* destaques */
+.highlights{background:var(--dark);color:#fff;padding:0 0 80px}
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.hl{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:26px}
+.hl i{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--accent);color:var(--dark);margin-bottom:16px}
+.hl i svg{width:22px;height:22px}
+.hl h3{font-size:21px;margin-bottom:6px}
+.hl p{color:rgba(255,255,255,.7);font-size:15px}
+
+/* serviços / cardápio */
+.menu-group+.menu-group{margin-top:44px}
+.menu-group h3{font-size:24px;margin-bottom:14px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px}
+.item{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;padding:20px 22px;border:1px solid var(--line);border-radius:var(--r);background:#fff;transition:border-color .15s}
+.item:hover{border-color:var(--accent)}
+.item b{font-size:17px}
+.item p{color:var(--muted);font-size:14.5px;margin-top:3px}
+.price{font-weight:700;white-space:nowrap;background:var(--soft);padding:4px 12px;border-radius:999px;font-size:15px}
+.menu-cta{margin-top:36px}
+.menu-cta .btn-main{box-shadow:none}
+
+/* galeria */
+.gallery{background:var(--soft)}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+.g-grid a{border-radius:14px;overflow:hidden;position:relative}
+.g-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.g-grid a:hover img{transform:scale(1.05)}
+.g-grid a:nth-child(1){grid-column:span 2;grid-row:span 2}
+.g-grid a:nth-child(6){grid-column:span 2}
+@media(max-width:760px){.g-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.g-grid a:nth-child(6){grid-column:span 1}}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;place-items:center;z-index:50;padding:20px;cursor:zoom-out}
+.lightbox.on{display:grid}
+.lightbox img{max-height:90vh;border-radius:12px}
+
+/* sobre */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-grid img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.about-grid p{color:var(--muted);font-size:17px;margin-top:16px}
+.nums{display:flex;gap:36px;margin-top:32px;flex-wrap:wrap}
+.nums b{display:block;font-family:"Archivo Black",sans-serif;font-size:40px;line-height:1;color:var(--ink)}
+.nums span{color:var(--muted);font-size:14px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}.about-grid img{aspect-ratio:16/11}}
+
+/* avaliações */
+.reviews{background:var(--dark);color:#fff}
+.reviews .sec-head p{color:rgba(255,255,255,.7)}
+.score{display:flex;align-items:center;gap:14px;margin-top:18px}
+.score b{font-size:44px;font-family:"Archivo Black",sans-serif;line-height:1}
+.score .stars svg{width:22px;height:22px}
+.r-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.review{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:26px}
+.review p{margin:14px 0 18px;color:rgba(255,255,255,.88)}
+.review footer{display:flex;align-items:center;gap:12px;font-weight:600}
+.review footer i{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--dark);font-style:normal;font-weight:800}
+.review small{display:block;color:rgba(255,255,255,.55);font-weight:400;font-size:13px}
+
+/* faq */
+.faq-list{max-width:780px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-weight:600;font-size:17px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:16px;font-size:28px;font-weight:400;color:var(--accent);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding:0 0 22px}
+
+/* contato */
+.contact{background:var(--soft)}
+.c-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:28px}
+.c-card{background:#fff;border-radius:24px;padding:34px;border:1px solid var(--line)}
+.c-card h3{font-size:22px;margin:26px 0 12px;display:flex;align-items:center;gap:10px}
+.c-card h3:first-child{margin-top:0}
+.c-card h3 svg{width:22px;height:22px;color:var(--accent)}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:7px 0;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:var(--ink);font-weight:700}
+.hours tr.today td:first-child::after{content:" (hoje)";font-weight:500;color:var(--muted)}
+.pay{display:flex;flex-wrap:wrap;gap:8px}
+.pay span{background:var(--soft);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500}
+.map{border:0;width:100%;height:100%;min-height:420px;border-radius:24px}
+@media(max-width:860px){.c-grid{grid-template-columns:1fr}.map{min-height:300px}}
+
+/* chamada final */
+.final{background:var(--accent);color:var(--dark);text-align:center;padding:80px 0}
+.final h2{font-size:clamp(32px,5vw,54px)}
+.final p{font-size:18px;margin:14px auto 30px;max-width:520px;opacity:.85}
+.final .btn{background:var(--dark);color:#fff}
+
+footer.site{background:var(--dark);color:rgba(255,255,255,.6);padding:34px 0;font-size:14px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer.site a{color:#fff;text-decoration:none}
+footer.site .social{display:inline-flex;align-items:center;gap:6px}
+footer.site .social svg{width:18px;height:18px}
+.float{position:fixed;right:20px;bottom:20px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.float svg{width:32px;height:32px}
+.demo{background:#111;color:#bbb;text-align:center;font-size:13px;padding:8px 16px}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="wrap">
+<a class="logo" href="#topo">Brasa Burger</a>
+<ul class="links"><li><a href="#servicos">Cardápio</a></li><li><a href="#galeria">Fotos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#contato">Contato</a></li></ul>
+<a class="btn btn-main" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Brasa%20Burger%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Pedir agora</a>
+</div></nav>
+
+<header class="hero" id="topo"><div class="hero-bg" role="img" aria-label="Cheeseburger duplo com picles"></div><div class="wrap">
+<span class="kicker">Centro · Londrina</span>
+<h1>Brasa Burger</h1>
+<p class="lead">Hambúrguer artesanal na brasa, pão de fermentação natural e batata cortada na casa. Peça pelo WhatsApp ou venha comer aqui.</p>
+<div class="ctas"><a class="btn btn-main" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Brasa%20Burger%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Pedir pelo WhatsApp</a><a class="btn btn-ghost" href="#servicos">Ver cardápio</a></div>
+<div class="chips"><span class="chip" id="status"><span class="dot"></span><span>Confira o horário</span></span><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Rua das Flores, 77</span><span class="chip"><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span> 4,8 no Google</span></div>
+</div></header>
+
+<section class="highlights"><div class="wrap hl-grid">
+<div class="hl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><h3>Feito na brasa</h3><p>Blend de 160g grelhado na hora, no ponto que você pedir.</p></div>
+<div class="hl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><h3>Delivery rápido</h3><p>Entregamos no Centro e bairros próximos em cerca de 40 minutos.</p></div>
+<div class="hl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><h3>Tudo artesanal</h3><p>Pão, molhos e batata preparados aqui mesmo, todos os dias.</p></div>
+</div></section>
+
+<section id="servicos"><div class="wrap">
+<div class="sec-head"><span class="kicker">Cardápio</span><h2>Nosso cardápio</h2><p>Todos os burgers vêm com blend de 160g. Adicione batata e bebida por R$ 14.</p></div>
+<div class="menu-group"><h3>Burgers</h3><div class="menu">
+<div class="item"><div><b>Brasa Clássico</b><p>Blend, queijo cheddar, alface, tomate e maionese da casa</p></div><span class="price">R$ 32</span></div>
+<div class="item"><div><b>Bacon Lover</b><p>Blend, cheddar, bacon crocante e cebola caramelizada</p></div><span class="price">R$ 38</span></div>
+<div class="item"><div><b>Duplo Smash</b><p>Dois smash de 90g, queijo prato duplo e picles</p></div><span class="price">R$ 36</span></div>
+<div class="item"><div><b>Chicken Crispy</b><p>Frango empanado, salada de repolho e molho de mostarda e mel</p></div><span class="price">R$ 33</span></div>
+</div></div>
+<div class="menu-group"><h3>Porções e bebidas</h3><div class="menu">
+<div class="item"><div><b>Batata rústica</b><p>Cortada na casa, com alecrim e páprica</p></div><span class="price">R$ 22</span></div>
+<div class="item"><div><b>Onion rings</b><p>Anéis de cebola empanados com molho barbecue</p></div><span class="price">R$ 24</span></div>
+<div class="item"><div><b>Refrigerante lata</b><p>Coca-Cola, Guaraná ou Sprite</p></div><span class="price">R$ 7</span></div>
+<div class="item"><div><b>Milkshake</b><p>Chocolate, morango ou Ovomaltine, 400 ml</p></div><span class="price">R$ 19</span></div>
+</div></div>
+<div class="menu-cta"><a class="btn btn-main" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Brasa%20Burger%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Pedir pelo WhatsApp</a></div>
+</div></section>
+
+<section class="gallery" id="galeria"><div class="wrap">
+<div class="sec-head"><span class="kicker">Fotos</span><h2>Dá uma olhada no que sai da nossa chapa</h2></div>
+<div class="g-grid"><a href="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1000&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 1 da Brasa Burger" loading="lazy"></a><a href="https://images.unsplash.com/photo-1550547660-d9450f859349?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 2 da Brasa Burger" loading="lazy"></a><a href="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 3 da Brasa Burger" loading="lazy"></a><a href="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 4 da Brasa Burger" loading="lazy"></a><a href="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 5 da Brasa Burger" loading="lazy"></a><a href="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 6 da Brasa Burger" loading="lazy"></a><a href="https://images.unsplash.com/photo-1603064752734-4c48eff53d05?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1603064752734-4c48eff53d05?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 7 da Brasa Burger" loading="lazy"></a><a href="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 8 da Brasa Burger" loading="lazy"></a></div>
+</div></section>
+
+<section id="sobre"><div class="wrap about-grid">
+<img src="https://images.unsplash.com/photo-1763689389824-dd2cea2e5772?w=1000&amp;q=70&amp;auto=format&amp;fit=crop" alt="Brasa Burger" loading="lazy">
+<div><span class="kicker">Sobre nós</span><h2 style="font-size:clamp(32px,4.5vw,46px)">Começou num food truck</h2>
+<p>A Brasa Burger começou em 2019 como um food truck de fim de semana. O movimento cresceu, e em 2022 abrimos a loja no Centro.</p><p>A receita continua a mesma: carne de qualidade, brasa de verdade e tudo preparado na hora. Sem pressa e sem atalho na cozinha.</p>
+<div class="nums"><div><b>2019</b><span>o primeiro burger</span></div><div><b>40 min</b><span>de entrega em média</span></div><div><b>4,8</b><span>de nota no Google</span></div></div>
+</div></div></section>
+
+<section class="reviews" id="avaliacoes"><div class="wrap">
+<div class="sec-head"><span class="kicker">Avaliações</span><h2>O que dizem nossos clientes</h2><div class="score"><b>4,8</b><div><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><br><small style="color:rgba(255,255,255,.6)">320 avaliações no Google</small></div></div></div>
+<div class="r-grid"><div class="review"><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>"O Bacon Lover é absurdo. Chegou quentinho, bem embalado e antes do horário que falaram."</p><footer><i>J</i><div>Juliana P.<small>Avaliação no Google</small></div></footer></div><div class="review"><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>"Melhor batata da cidade, sem exagero. O ambiente da loja também é muito bom pra ir com a galera."</p><footer><i>T</i><div>Thiago R.<small>Avaliação no Google</small></div></footer></div><div class="review"><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>"Pedi pelo WhatsApp e foi super fácil. O smash duplo virou meu pedido de toda sexta."</p><footer><i>C</i><div>Camila S.<small>Avaliação no Google</small></div></footer></div></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<div class="sec-head"><span class="kicker">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+<div class="faq-list"><details><summary>Vocês fazem entrega?</summary><p>Sim! Entregamos no Centro e bairros próximos. A taxa varia de R$ 5 a R$ 10, conforme a distância.</p></details><details><summary>Como faço o pedido?</summary><p>Pelo WhatsApp: é só clicar no botão, mandar seu pedido e o endereço. Também atendemos na loja.</p></details><details><summary>Tem opção vegetariana?</summary><p>Temos o burger de grão-de-bico com queijo e salada. Pergunte no WhatsApp.</p></details><details><summary>Quais formas de pagamento vocês aceitam?</summary><p>Pix, dinheiro e cartão. Na entrega, levamos a maquininha.</p></details></div>
+</div></section>
+
+<section class="contact" id="contato"><div class="wrap">
+<div class="sec-head"><span class="kicker">Contato</span><h2>Venha nos visitar</h2></div>
+<div class="c-grid"><div class="c-card">
+<h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Endereço</h3><p>Rua das Flores, 77 · Centro<br>Londrina - PR</p>
+<p style="margin-top:12px"><a href="https://www.google.com/maps/search/?api=1&query=Londrina%20-%20PR" target="_blank" rel="noopener" style="color:var(--ink);font-weight:600">Abrir no Google Maps →</a></p>
+<h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horário</h3>
+<table class="hours"><tr data-d="1"><td>Segunda</td><td>Fechado</td></tr><tr data-d="2"><td>Terça</td><td>18:00 às 23:30</td></tr><tr data-d="3"><td>Quarta</td><td>18:00 às 23:30</td></tr><tr data-d="4"><td>Quinta</td><td>18:00 às 23:30</td></tr><tr data-d="5"><td>Sexta</td><td>18:00 às 00:30</td></tr><tr data-d="6"><td>Sábado</td><td>18:00 às 00:30</td></tr><tr data-d="0"><td>Domingo</td><td>18:00 às 23:00</td></tr></table>
+<h3>Pagamento</h3><div class="pay"><span>Pix</span><span>Dinheiro</span><span>Débito</span><span>Crédito</span><span>Vale-refeição</span></div>
+<p style="margin-top:28px"><a class="btn btn-main" style="box-shadow:none" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Brasa%20Burger%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Falar no WhatsApp</a></p>
+</div>
+<iframe class="map" loading="lazy" title="Mapa" src="https://maps.google.com/maps?q=Londrina%20-%20PR&z=15&output=embed"></iframe>
+</div></div></section>
+
+<section class="final"><div class="wrap">
+<h2>Bateu a fome?</h2>
+<p>Manda seu pedido no WhatsApp que a gente coloca na brasa agora.</p>
+<a class="btn" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Brasa%20Burger%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Pedir pelo WhatsApp</a>
+</div></section>
+
+<footer class="site"><div class="wrap">
+<span>© 2026 Brasa Burger</span>
+
+<span>Site feito por <a href="https://atalhoweb-web.github.io">Atalho Web</a></span>
+</div></footer>
+<div class="demo">Site de exemplo criado pela Atalho Web. Negócio, avaliações e fotos são ilustrativos (fotos: Unsplash).</div>
+
+<a class="float" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Brasa%20Burger%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg></a>
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script>
+var H=["18:00-23:00",null,"18:00-23:30","18:00-23:30","18:00-23:30","18:00-00:30","18:00-00:30"];
+(function(){var n=new Date(),d=n.getDay(),m=n.getHours()*60+n.getMinutes(),h=H[d],open=false;
+ if(h){var p=h.split("-"),a=p[0].split(":"),b=p[1].split(":");var s=+a[0]*60+ +a[1],e=+b[0]*60+ +b[1];if(e<=s)e+=1440;open=m>=s&&m<e}
+ var st=document.getElementById("status");st.lastChild.textContent=open?"Aberto agora · até "+h.split("-")[1]:(h?"Fechado agora · hoje "+h.replace("-"," às "):"Fechado hoje");
+ if(open)st.classList.add("open");
+ var tr=document.querySelector('.hours tr[data-d="'+d+'"]');if(tr)tr.classList.add("today")})();
+var nav=document.getElementById("nav");function sc(){nav.classList.toggle("solid",scrollY>40)}addEventListener("scroll",sc);sc();
+var lb=document.getElementById("lb");document.querySelectorAll("[data-lb]").forEach(function(a){a.onclick=function(e){e.preventDefault();lb.firstChild.src=a.href;lb.classList.add("on")}});lb.onclick=function(){lb.classList.remove("on")};
+</script>
+</body>
+</html>

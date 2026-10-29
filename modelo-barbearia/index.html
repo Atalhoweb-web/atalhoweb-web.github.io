@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barbearia Navalha de Ouro | Barbearia em Londrina</title>
+<meta name="description" content="Barbearia no Centro de Londrina. Corte masculino, barba na navalha, sobrancelha e pigmentação. Agende pelo WhatsApp.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Barbearia Navalha de Ouro">
+<meta property="og:description" content="Barbearia no Centro de Londrina. Corte masculino, barba na navalha, sobrancelha e pigmentação. Agende pelo WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop">
+<meta property="og:url" content="https://atalhoweb-web.github.io/modelo-barbearia/">
+<meta name="theme-color" content="#17130f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%23c8a26a%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-family%3D%22Arial%22%20font-weight%3D%22900%22%20font-size%3D%2234%22%20text-anchor%3D%22middle%22%20fill%3D%22%2317130f%22%3EB%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--dark:#17130f;--accent:#c8a26a;--ink:#14161a;--muted:#5d6470;--line:#e7e9ee;--soft:#f5f1ea;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.logo{font-family:"Oswald",sans-serif;line-height:1.08;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:88px 0}
+.kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.sec-head{max-width:620px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(32px,4.5vw,48px)}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:17px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn svg{width:20px;height:20px}
+.btn-main{background:var(--accent);color:var(--dark);box-shadow:0 10px 30px -10px var(--accent)}
+.btn-main:hover{transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* topo */
+.nav{position:fixed;inset:0 0 auto;z-index:20;transition:background .25s,box-shadow .25s}
+.nav.solid{background:var(--dark);box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{color:#fff;text-decoration:none;font-size:24px}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:26px;list-style:none}
+.links a{color:rgba(255,255,255,.85);text-decoration:none;font-weight:500;font-size:15px}
+.links a:hover{color:#fff}
+.nav .btn{padding:10px 18px;font-size:14px}
+@media(max-width:860px){.links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;padding:140px 0 70px;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=2000&amp;q=70&amp;auto=format&amp;fit=crop") center/cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 70%),linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.25) 40%,var(--dark) 100%)}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(46px,8vw,92px);max-width:900px}
+.hero p.lead{font-size:clamp(18px,2.2vw,22px);max-width:560px;margin:18px 0 32px;color:rgba(255,255,255,.88)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);padding:9px 15px;border-radius:999px;font-size:14px;font-weight:500}
+.chip svg{width:17px;height:17px;color:var(--accent)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:#9aa0a6}
+.chip.open .dot{background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.25)}
+.stars{display:inline-flex;gap:2px;color:#ffc531}
+.stars svg{width:16px;height:16px}
+
+/* destaques */
+.highlights{background:var(--dark);color:#fff;padding:0 0 80px}
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.hl{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:26px}
+.hl i{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--accent);color:var(--dark);margin-bottom:16px}
+.hl i svg{width:22px;height:22px}
+.hl h3{font-size:21px;margin-bottom:6px}
+.hl p{color:rgba(255,255,255,.7);font-size:15px}
+
+/* serviços / cardápio */
+.menu-group+.menu-group{margin-top:44px}
+.menu-group h3{font-size:24px;margin-bottom:14px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px}
+.item{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;padding:20px 22px;border:1px solid var(--line);border-radius:var(--r);background:#fff;transition:border-color .15s}
+.item:hover{border-color:var(--accent)}
+.item b{font-size:17px}
+.item p{color:var(--muted);font-size:14.5px;margin-top:3px}
+.price{font-weight:700;white-space:nowrap;background:var(--soft);padding:4px 12px;border-radius:999px;font-size:15px}
+.menu-cta{margin-top:36px}
+.menu-cta .btn-main{box-shadow:none}
+
+/* galeria */
+.gallery{background:var(--soft)}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+.g-grid a{border-radius:14px;overflow:hidden;position:relative}
+.g-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.g-grid a:hover img{transform:scale(1.05)}
+.g-grid a:nth-child(1){grid-column:span 2;grid-row:span 2}
+.g-grid a:nth-child(6){grid-column:span 2}
+@media(max-width:760px){.g-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.g-grid a:nth-child(6){grid-column:span 1}}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;place-items:center;z-index:50;padding:20px;cursor:zoom-out}
+.lightbox.on{display:grid}
+.lightbox img{max-height:90vh;border-radius:12px}
+
+/* sobre */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-grid img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.about-grid p{color:var(--muted);font-size:17px;margin-top:16px}
+.nums{display:flex;gap:36px;margin-top:32px;flex-wrap:wrap}
+.nums b{display:block;font-family:"Oswald",sans-serif;font-size:40px;line-height:1;color:var(--ink)}
+.nums span{color:var(--muted);font-size:14px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}.about-grid img{aspect-ratio:16/11}}
+
+/* avaliações */
+.reviews{background:var(--dark);color:#fff}
+.reviews .sec-head p{color:rgba(255,255,255,.7)}
+.score{display:flex;align-items:center;gap:14px;margin-top:18px}
+.score b{font-size:44px;font-family:"Oswald",sans-serif;line-height:1}
+.score .stars svg{width:22px;height:22px}
+.r-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.review{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:26px}
+.review p{margin:14px 0 18px;color:rgba(255,255,255,.88)}
+.review footer{display:flex;align-items:center;gap:12px;font-weight:600}
+.review footer i{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--dark);font-style:normal;font-weight:800}
+.review small{display:block;color:rgba(255,255,255,.55);font-weight:400;font-size:13px}
+
+/* faq */
+.faq-list{max-width:780px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-weight:600;font-size:17px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:16px;font-size:28px;font-weight:400;color:var(--accent);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding:0 0 22px}
+
+/* contato */
+.contact{background:var(--soft)}
+.c-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:28px}
+.c-card{background:#fff;border-radius:24px;padding:34px;border:1px solid var(--line)}
+.c-card h3{font-size:22px;margin:26px 0 12px;display:flex;align-items:center;gap:10px}
+.c-card h3:first-child{margin-top:0}
+.c-card h3 svg{width:22px;height:22px;color:var(--accent)}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:7px 0;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:var(--ink);font-weight:700}
+.hours tr.today td:first-child::after{content:" (hoje)";font-weight:500;color:var(--muted)}
+.pay{display:flex;flex-wrap:wrap;gap:8px}
+.pay span{background:var(--soft);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500}
+.map{border:0;width:100%;height:100%;min-height:420px;border-radius:24px}
+@media(max-width:860px){.c-grid{grid-template-columns:1fr}.map{min-height:300px}}
+
+/* chamada final */
+.final{background:var(--accent);color:var(--dark);text-align:center;padding:80px 0}
+.final h2{font-size:clamp(32px,5vw,54px)}
+.final p{font-size:18px;margin:14px auto 30px;max-width:520px;opacity:.85}
+.final .btn{background:var(--dark);color:#fff}
+
+footer.site{background:var(--dark);color:rgba(255,255,255,.6);padding:34px 0;font-size:14px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer.site a{color:#fff;text-decoration:none}
+footer.site .social{display:inline-flex;align-items:center;gap:6px}
+footer.site .social svg{width:18px;height:18px}
+.float{position:fixed;right:20px;bottom:20px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.float svg{width:32px;height:32px}
+.demo{background:#111;color:#bbb;text-align:center;font-size:13px;padding:8px 16px}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="wrap">
+<a class="logo" href="#topo">Navalha de Ouro</a>
+<ul class="links"><li><a href="#servicos">Serviços</a></li><li><a href="#galeria">Fotos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#contato">Contato</a></li></ul>
+<a class="btn btn-main" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20queria%20agendar%20um%20hor%C3%A1rio%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Agendar</a>
+</div></nav>
+
+<header class="hero" id="topo"><div class="hero-bg" role="img" aria-label="Barbeiro fazendo acabamento com navalha"></div><div class="wrap">
+<span class="kicker">Centro · Londrina</span>
+<h1>Barbearia Navalha de Ouro</h1>
+<p class="lead">Corte, barba e acabamento feitos com calma, por quem entende do assunto. Agende seu horário e chegue na hora certa.</p>
+<div class="ctas"><a class="btn btn-main" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20queria%20agendar%20um%20hor%C3%A1rio%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Agendar pelo WhatsApp</a><a class="btn btn-ghost" href="#servicos">Ver serviços e preços</a></div>
+<div class="chips"><span class="chip" id="status"><span class="dot"></span><span>Confira o horário</span></span><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Rua das Palmeiras, 120</span><span class="chip"><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span> 4,9 no Google</span></div>
+</div></header>
+
+<section class="highlights"><div class="wrap hl-grid">
+<div class="hl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><h3>Hora marcada</h3><p>Você agenda pelo WhatsApp e é atendido no horário combinado, sem fila.</p></div>
+<div class="hl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><h3>Barbeiros experientes</h3><p>Equipe com anos de cadeira, do clássico ao degradê mais moderno.</p></div>
+<div class="hl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><h3>Ambiente tranquilo</h3><p>Café, ar-condicionado e um lugar pra relaxar enquanto espera.</p></div>
+</div></section>
+
+<section id="servicos"><div class="wrap">
+<div class="sec-head"><span class="kicker">Serviços</span><h2>Serviços e preços</h2><p>Valores fixos, sem surpresa. Todos os cortes incluem lavagem e finalização.</p></div>
+<div class="menu-group"><h3>Cabelo</h3><div class="menu">
+<div class="item"><div><b>Corte masculino</b><p>Tesoura ou máquina, com lavagem e finalização</p></div><span class="price">R$ 45</span></div>
+<div class="item"><div><b>Degradê</b><p>Low, mid ou high fade com acabamento na navalha</p></div><span class="price">R$ 50</span></div>
+<div class="item"><div><b>Corte infantil</b><p>Até 12 anos</p></div><span class="price">R$ 35</span></div>
+<div class="item"><div><b>Pigmentação</b><p>Disfarça falhas e realça o desenho do corte</p></div><span class="price">R$ 30</span></div>
+</div></div>
+<div class="menu-group"><h3>Barba e combos</h3><div class="menu">
+<div class="item"><div><b>Barba na navalha</b><p>Toalha quente, navalha e hidratação</p></div><span class="price">R$ 40</span></div>
+<div class="item"><div><b>Corte + barba</b><p>O combo mais pedido da casa</p></div><span class="price">R$ 80</span></div>
+<div class="item"><div><b>Sobrancelha</b><p>Na navalha ou na pinça</p></div><span class="price">R$ 15</span></div>
+<div class="item"><div><b>Dia do noivo</b><p>Corte, barba, limpeza de pele e bebida</p></div><span class="price">R$ 180</span></div>
+</div></div>
+<div class="menu-cta"><a class="btn btn-main" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20queria%20agendar%20um%20hor%C3%A1rio%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Agendar pelo WhatsApp</a></div>
+</div></section>
+
+<section class="gallery" id="galeria"><div class="wrap">
+<div class="sec-head"><span class="kicker">Fotos</span><h2>Um pouco do nosso trabalho</h2></div>
+<div class="g-grid"><a href="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 1 da Barbearia Navalha de Ouro" loading="lazy"></a><a href="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 2 da Barbearia Navalha de Ouro" loading="lazy"></a><a href="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 3 da Barbearia Navalha de Ouro" loading="lazy"></a><a href="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 4 da Barbearia Navalha de Ouro" loading="lazy"></a><a href="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 5 da Barbearia Navalha de Ouro" loading="lazy"></a><a href="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 6 da Barbearia Navalha de Ouro" loading="lazy"></a><a href="https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 7 da Barbearia Navalha de Ouro" loading="lazy"></a><a href="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=1600&amp;q=70&amp;auto=format&amp;fit=crop" data-lb><img src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=600&amp;q=70&amp;auto=format&amp;fit=crop" alt="Foto 8 da Barbearia Navalha de Ouro" loading="lazy"></a></div>
+</div></section>
+
+<section id="sobre"><div class="wrap about-grid">
+<img src="https://images.unsplash.com/photo-1536520002442-39764a41e987?w=1000&amp;q=70&amp;auto=format&amp;fit=crop" alt="Barbearia Navalha de Ouro" loading="lazy">
+<div><span class="kicker">Sobre nós</span><h2 style="font-size:clamp(32px,4.5vw,46px)">Tradição de barbearia, do jeito certo</h2>
+<p>A Navalha de Ouro nasceu em 2016 com uma ideia simples: fazer um corte bem feito, sem pressa, num lugar onde dá gosto de ficar.</p><p>Hoje somos três barbeiros atendendo com hora marcada, do corte clássico ao degradê, sempre com toalha quente, navalha e aquele café.</p>
+<div class="nums"><div><b>8 anos</b><span>no Centro de Londrina</span></div><div><b>3</b><span>barbeiros na equipe</span></div><div><b>4,9</b><span>de nota no Google</span></div></div>
+</div></div></section>
+
+<section class="reviews" id="avaliacoes"><div class="wrap">
+<div class="sec-head"><span class="kicker">Avaliações</span><h2>O que dizem nossos clientes</h2><div class="score"><b>4,9</b><div><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><br><small style="color:rgba(255,255,255,.6)">180 avaliações no Google</small></div></div></div>
+<div class="r-grid"><div class="review"><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>"Melhor degradê que já fiz. Atendimento no horário, ambiente top e o pessoal é muito gente boa."</p><footer><i>R</i><div>Rafael M.<small>Avaliação no Google</small></div></footer></div><div class="review"><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>"Faço a barba aqui há dois anos. Toalha quente, navalha e capricho em todo detalhe."</p><footer><i>L</i><div>Lucas A.<small>Avaliação no Google</small></div></footer></div><div class="review"><span class="stars" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>"Levei meu filho pro primeiro corte e foram super pacientes com ele. Virou nossa barbearia."</p><footer><i>B</i><div>Bruno T.<small>Avaliação no Google</small></div></footer></div></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<div class="sec-head"><span class="kicker">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+<div class="faq-list"><details><summary>Precisa agendar?</summary><p>Recomendamos agendar pelo WhatsApp para garantir seu horário. Se tiver encaixe, atendemos sem hora marcada também.</p></details><details><summary>Quanto tempo demora um corte?</summary><p>Em média 40 minutos. Corte e barba juntos levam cerca de 1 hora.</p></details><details><summary>Quais formas de pagamento vocês aceitam?</summary><p>Pix, dinheiro e cartão de débito ou crédito.</p></details><details><summary>Tem estacionamento?</summary><p>Não temos estacionamento próprio, mas há vagas na rua e um estacionamento conveniado a 50 metros.</p></details></div>
+</div></section>
+
+<section class="contact" id="contato"><div class="wrap">
+<div class="sec-head"><span class="kicker">Contato</span><h2>Venha nos visitar</h2></div>
+<div class="c-grid"><div class="c-card">
+<h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Endereço</h3><p>Rua das Palmeiras, 120 · Centro<br>Londrina - PR</p>
+<p style="margin-top:12px"><a href="https://www.google.com/maps/search/?api=1&query=Centro%2C%20Londrina%20-%20PR" target="_blank" rel="noopener" style="color:var(--ink);font-weight:600">Abrir no Google Maps →</a></p>
+<h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horário</h3>
+<table class="hours"><tr data-d="1"><td>Segunda</td><td>Fechado</td></tr><tr data-d="2"><td>Terça</td><td>09:00 às 20:00</td></tr><tr data-d="3"><td>Quarta</td><td>09:00 às 20:00</td></tr><tr data-d="4"><td>Quinta</td><td>09:00 às 20:00</td></tr><tr data-d="5"><td>Sexta</td><td>09:00 às 20:00</td></tr><tr data-d="6"><td>Sábado</td><td>08:00 às 17:00</td></tr><tr data-d="0"><td>Domingo</td><td>Fechado</td></tr></table>
+<h3>Pagamento</h3><div class="pay"><span>Pix</span><span>Dinheiro</span><span>Débito</span><span>Crédito</span></div>
+<p style="margin-top:28px"><a class="btn btn-main" style="box-shadow:none" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20queria%20agendar%20um%20hor%C3%A1rio%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Falar no WhatsApp</a></p>
+</div>
+<iframe class="map" loading="lazy" title="Mapa" src="https://maps.google.com/maps?q=Centro%2C%20Londrina%20-%20PR&z=15&output=embed"></iframe>
+</div></div></section>
+
+<section class="final"><div class="wrap">
+<h2>Bora dar um tapa no visual?</h2>
+<p>Escolha o melhor horário e garanta sua cadeira pelo WhatsApp.</p>
+<a class="btn" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20queria%20agendar%20um%20hor%C3%A1rio%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg>Agendar pelo WhatsApp</a>
+</div></section>
+
+<footer class="site"><div class="wrap">
+<span>© 2026 Barbearia Navalha de Ouro</span>
+
+<span>Site feito por <a href="https://atalhoweb-web.github.io">Atalho Web</a></span>
+</div></footer>
+<div class="demo">Site de exemplo criado pela Atalho Web. Negócio, avaliações e fotos são ilustrativos (fotos: Unsplash).</div>
+
+<a class="float" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20queria%20agendar%20um%20hor%C3%A1rio%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg></a>
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script>
+var H=[null,null,"09:00-20:00","09:00-20:00","09:00-20:00","09:00-20:00","08:00-17:00"];
+(function(){var n=new Date(),d=n.getDay(),m=n.getHours()*60+n.getMinutes(),h=H[d],open=false;
+ if(h){var p=h.split("-"),a=p[0].split(":"),b=p[1].split(":");var s=+a[0]*60+ +a[1],e=+b[0]*60+ +b[1];if(e<=s)e+=1440;open=m>=s&&m<e}
+ var st=document.getElementById("status");st.lastChild.textContent=open?"Aberto agora · até "+h.split("-")[1]:(h?"Fechado agora · hoje "+h.replace("-"," às "):"Fechado hoje");
+ if(open)st.classList.add("open");
+ var tr=document.querySelector('.hours tr[data-d="'+d+'"]');if(tr)tr.classList.add("today")})();
+var nav=document.getElementById("nav");function sc(){nav.classList.toggle("solid",scrollY>40)}addEventListener("scroll",sc);sc();
+var lb=document.getElementById("lb");document.querySelectorAll("[data-lb]").forEach(function(a){a.onclick=function(e){e.preventDefault();lb.firstChild.src=a.href;lb.classList.add("on")}});lb.onclick=function(){lb.classList.remove("on")};
+</script>
+</body>
+</html>
